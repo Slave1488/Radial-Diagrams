@@ -11,12 +11,12 @@ export default class Render2D {
         return new Point(this._canvas.width / 2, this._canvas.height / 2);
     }
 
-    static fromLogicalToDrawing(point) {
-        return point.reversY();
+    fromLogicalToDrawing(point) {
+        return point.reversY().add(this.center);
     }
 
     strokePath(logicalPoints) {
-        let drowingPoints = logicalPoints.map(Render2D.fromLogicalToDrawing);
+        let drowingPoints = logicalPoints.map(p => this.fromLogicalToDrawing(p));
         this._context.beginPath();
         let point = drowingPoints.unshift();
         this._context.moveTo(point.x, point.y);
