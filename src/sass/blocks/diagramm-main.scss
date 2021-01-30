@@ -1,0 +1,46 @@
+.diagramm-main {
+
+  &__title {
+    text-align: center;
+  }
+  &__title-main {
+    margin: 40px auto;
+    text-align: center;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  &__data-entry {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__main-wrap {
+    flex: 1 0 50%;
+    display: flex;
+    min-height: 500px;
+  }
+  &__data-entry {
+    flex: 1 0 30%;
+    background-color: red;
+  }
+  &__diagramm {
+    flex: 1 1 70%;
+    background-color: green;
+    width: 100%;
+    padding: 50px;
+  }
+  &__apply {
+    margin-top: 15px;
+  }
+}
+.diagramm-value {
+  display: flex;
+  flex-direction: column;
+}
+

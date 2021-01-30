@@ -1,0 +1,46 @@
+include ../global/head
+include ../global/header
+include ../global/footer
+include ../components/svg
+
+//- -
+//-   const pageName = ['Page name']
+
+doctype html
+html(lang="ru")
+  +head('Главная')
+  body.layout
+    +header()
+    main
+      a(href="index.html").back Назад
+      section.container.diagramm-main
+        .diagramm-main__wrap
+          .diagramm-main__content
+            .diagramm-main__title-main
+              h1 Новая диаграмма
+            .diagramm-main__main-wrap
+              .diagramm-main__data-entry
+                .diagramm-main__title
+                  h2 Введите данные
+                form(action="#").diagramm-main__form
+                  .diagramm-value
+                    label(for="name") Название диаграммы
+                    input(type="text" id='name')
+                  .diagramm-value
+                    label(for="str") Сила
+                    input(type="text" id='str')
+                  .diagramm-value
+                    label(for="agi") Ловкость
+                    input(type="text" id='agi')
+                  .diagramm-value
+                    label(for="con") Здоровье
+                    input(type="text" id='con')
+                  button(type='button').diagramm-main__apply Применить
+              .diagramm-main__diagramm
+                canvas
+          .diagramm-main__save
+            button(type='button') Сохранить диаграмму
+    +footer
+
+    script(src="js/vendor.js")
+    script(src="js/main.js")

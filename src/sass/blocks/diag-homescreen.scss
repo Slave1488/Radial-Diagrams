@@ -1,0 +1,44 @@
+.diag-homescreen {
+  background-color: lightgray;
+  margin-top: 50px;
+  padding: 30px 0 30px 0;
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  &__table-content {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 15px;
+  }
+  &__table-items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    min-height: 160px;
+    border: 1px solid greenyellow;
+    &:hover .diag-homescreen__table-delete {
+      opacity: 1;
+    }
+  }
+  &__table-img {
+    width: 160px;
+    height: 120px;
+  }
+  &__table-title {
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    font-size: 12px;
+  }
+  &__table-delete {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+  }
+}

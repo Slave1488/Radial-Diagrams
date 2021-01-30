@@ -1,0 +1,65 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "project-description",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"src/sass/blocks/**/*.scss\" --syntax scss",
+    "eslint": "npx eslint .",
+    "test": "npm run editorconfig && npm run stylelint && npx eslint .",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "start": "gulp start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "gulp-pug": "^4.0.1",
+    "node-normalize-scss": "^8.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
+    "autoprefixer": "^9.8.5",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.12",
+    "cross-env": "^5.2.1",
+    "del": "^3.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^3.0.1",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-pngquant": "^7.0.0",
+    "imagemin-webp": "^6.0.0",
+    "node-sass": "^4.14.1",
+    "posthtml-include": "^1.4.3",
+    "stylelint": "^9.10.1",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-stream": "^5.2.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.html",
+    "src/js/**/*.js",
+    "src/sass/**/*.{sass,scss}"
+  ]
+}

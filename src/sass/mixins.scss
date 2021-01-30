@@ -1,0 +1,43 @@
+// @mixin desktop-min-width {
+//   @media (min-width: ($laptop-max-width + 1)) {
+//     @content;
+//   }
+// }
+
+// @mixin laptop-min-width {
+//   @media (min-width: ($tablet-max-width + 1)) {
+//     @content;
+//   }
+// }
+
+@mixin laptop {
+  @media (max-width: $laptop-max-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet-max-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin transition {
+  transition: transform 0.3s, opacity 0.3s, filter 0.3s, background 0.3s, color 0.3s, box-shadow 0.3s, stroke 0.3s, fill 0.3s, height 0.3s;
+}
+
+@mixin transition-style($style) {
+  transition: $style 0.3s;
+}
