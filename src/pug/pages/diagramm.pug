@@ -12,29 +12,50 @@ html(lang="ru")
   body.layout
     +header()
     main
-      a(href="index.html").back Назад
+      a(href="index.html").back.container Назад
       section.container.diagramm-main
         .diagramm-main__wrap
           .diagramm-main__content
             .diagramm-main__title-main
-              h1 Новая диаграмма
+              h1 Шаблон 1
+            .diagramm-main__preview
+              .diagramm-main__table-content
+                a(href="#").diagramm-main__table-items
+                  .diagramm-main__table-delete
+                    img(src="img/delete.png", alt="delete")
+                  .diagramm-main__table-img
+                    img(src="img/diag.png", alt="name")
+                  .diagramm-main__table-title
+                    h2 Лето
+                a(href="#").diagramm-main__table-items
+                  .diagramm-main__table-delete
+                    img(src="img/delete.png", alt="delete")
+                  .diagramm-main__table-img
+                    img(src="img/diag.png", alt="name")
+                  .diagramm-main__table-title
+                    h2 Зима
+              .diagramm-main__compare
+                p Выберите нужные диаграммы используя shift+clict и нажмите кнопку 'Сравнить' для сравнения диаграмм.
+                button(type='button') Сравнить
             .diagramm-main__main-wrap
               .diagramm-main__data-entry
                 .diagramm-main__title
                   h2 Введите данные
                 form(action="#").diagramm-main__form
-                  .diagramm-value
-                    label(for="name") Название диаграммы
-                    input(type="text" id='name')
-                  .diagramm-value
-                    label(for="str") Сила
-                    input(type="text" id='str')
-                  .diagramm-value
-                    label(for="agi") Ловкость
-                    input(type="text" id='agi')
-                  .diagramm-value
-                    label(for="con") Здоровье
-                    input(type="text" id='con')
+                  .diagramm-main__parameter-container
+                    .diagramm-value
+                      label(for="name") Название диаграммы
+                      input(type="text" id='name')
+                    .diagramm-value
+                      label(for="str") Сила
+                      input(type="text" id='str')
+                    .diagramm-value
+                      label(for="agi") Ловкость
+                      input(type="text" id='agi')
+                    .diagramm-value
+                      label(for="con") Здоровье
+                      input(type="text" id='con')
+                  button(type='button').diagramm-main__add-parameter Добавить параметр
                   button(type='button').diagramm-main__apply Применить
               .diagramm-main__diagramm
                 canvas

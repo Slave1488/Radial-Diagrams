@@ -22,6 +22,9 @@
     &:hover .diag-homescreen__table-delete {
       opacity: 1;
     }
+    &:hover {
+      border-color: red;
+    }
   }
   &__table-img {
     width: 160px;
