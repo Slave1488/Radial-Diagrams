@@ -22,25 +22,25 @@ html(lang="ru")
               .diagramm-template__data-entry
                 .diagramm-template__title
                   h2 Введите данные
-                form(action="#").diagramm-template__form
+                form(action="#" name='pattern maker').diagramm-template__form
                   .diagramm-value
                     label(for="name") Название шаблона
-                    input(type="text" id='name')
+                    input(type="text" name='name')
                   .diagramm-value
                     label(for="par1") Параметр 1
-                    input(type="text" id='par1')
+                    input(type="text" name='scale')
                   .diagramm-value
                     label(for="par2") Параметр 2
-                    input(type="text" id='par2')
+                    input(type="text" name='scale')
                   .diagramm-value
                     label(for="par3") Параметр 3
-                    input(type="text" id='par3')
+                    input(type="text" name='scale')
                   button(type='button').diagramm-template__add-parameter Добавить параметр
                   button(type='button').diagramm-template__apply Применить
               .diagramm-template__diagramm
                 canvas
           .diagramm-template__save
-            button(type='button') Сохранить шаблон
+            button#savePattern(type='button') Сохранить шаблон
     +footer
 
     script(src="js/vendor.js")

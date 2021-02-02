@@ -1,12 +1,11 @@
-import canvas from './canvas';
 import patterns from './diagram-patterns';
 
 export default () => {
     
-    patterns.add("Naruto", 10, ["strength", "intelligence", "agility"]);
-    patterns.add("Boruto", 10, ["strength", "intelligence", "agility"]);
-    patterns.add("Soruto", 10, ["strength", "intelligence", "agility"]);
-    patterns.add("Seruto", 10, ["strength", "intelligence", "agility"]);
+    // patterns.add("Naruto", 10, ["strength", "intelligence", "agility"]);
+    // patterns.add("Boruto", 10, ["strength", "intelligence", "agility"]);
+    // patterns.add("Soruto", 10, ["strength", "intelligence", "agility"]);
+    // patterns.add("Seruto", 10, ["strength", "intelligence", "agility"]);
     document.addEventListener('DOMContentLoaded', () => {
         // e.preventDefault();
         let table = document.querySelector(".diag-homescreen__table-content");
@@ -46,5 +45,4 @@ export default () => {
             table.append(item);
         }
     });
-    //addPattern("cryptocurrency ", 5, ["profitability", "scalability", "notoriety", "reliability"]);
 }

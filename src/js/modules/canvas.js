@@ -6,7 +6,6 @@ export default () => {
     document.addEventListener('DOMContentLoaded', () => {
         let canvass = document.querySelectorAll('canvas');
         for (let canvas of canvass) {
-            console.log("Первый");
             let ctx = canvas.getContext('2d');
 
             // canvas.width = window.innerWidth;
