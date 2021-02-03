@@ -15,7 +15,7 @@ class DiagramPatterns {
     }
 
     add(name, scaleRange, scaleNames) {
-        this.patterns[name] = new DiagramPattern(name, scaleRange, scaleNames);
+        this.patterns.push(new DiagramPattern(name, scaleRange, scaleNames));
         localStorage.setItem("diagram patterns", JSON.stringify(this.patterns))
     }
 
