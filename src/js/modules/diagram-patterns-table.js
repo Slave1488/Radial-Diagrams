@@ -39,9 +39,9 @@ export default () => {
         let tablTitleH2 = document.createElement('h2');
         tablTitle.append(tablTitleH2);
         
-        for (let pattern in patterns.patterns) {
+        for (let pattern of patterns.patterns) {
             let item = tableItems.cloneNode(true);
-            item.lastChild.firstChild.insertAdjacentText('beforeend', pattern);
+            item.lastChild.firstChild.insertAdjacentText('beforeend', pattern.name);
             table.append(item);
         }
     });
