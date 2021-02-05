@@ -43,22 +43,9 @@ html(lang="ru")
                   h2 Введите данные
                 form(action="#").diagramm-main__form
                   .diagramm-main__parameter-container
-                    .diagramm-value
-                      label(for="name") Название диаграммы
-                      input(type="text" id='name')
-                    .diagramm-value
-                      label(for="str") Сила
-                      input(type="text" id='str')
-                    .diagramm-value
-                      label(for="agi") Ловкость
-                      input(type="text" id='agi')
-                    .diagramm-value
-                      label(for="con") Здоровье
-                      input(type="text" id='con')
                   button(type='button').diagramm-main__add-parameter Добавить параметр
                   button(type='button').diagramm-main__apply Применить
               .diagramm-main__diagramm
-                canvas
           .diagramm-main__save
             button(type='button') Сохранить диаграмму
     +footer

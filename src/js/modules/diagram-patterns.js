@@ -19,12 +19,20 @@ class DiagramPatterns {
         localStorage.setItem("diagram patterns", JSON.stringify(this.patterns))
     }
 
+    get(key) {
+        return this.patterns[key];
+    }
+
+    remove(key) {
+        this.patterns.splice(key, 1);
+        localStorage.setItem("diagram patterns", JSON.stringify(this.patterns))
+    }
+
     show() {
-        for (let pattern in this.patterns) {
+        for (let pattern of this.patterns) {
             console.log(pattern, this.patterns[pattern]);
         }  
     }
 }
 
-let diagramPatterns = new DiagramPatterns();
-export default diagramPatterns;
+export default new DiagramPatterns();
