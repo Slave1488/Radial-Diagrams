@@ -34,7 +34,7 @@ class NGon {
     }
 }
 
-class CenteredNormalizedNGon extends NGon {
+export default class CenteredNormalizedNGon extends NGon {
     constructor(n) {
         super(new Point(0, 0), CenteredNormalizedNGon.genCorners(n), n);
     }
@@ -49,6 +49,3 @@ class CenteredNormalizedNGon extends NGon {
         return res;
     }
 }
-
-let BasicNGon = CenteredNormalizedNGon;
-export default BasicNGon;
