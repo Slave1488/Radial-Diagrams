@@ -1,16 +1,15 @@
 import patterns from './diagram-patterns';
 
 export default () => {
-    let maker = document.forms["pattern maker"];
-    let diagramName = maker["name"];
-    let diagramScales = maker["scale"];
+    for (let form of document.querySelectorAll('form.diagramm-template__form')) {
+        let inputName = form["name"];
+        let inputScales = form["scale"];
 
-    savePattern.addEventListener('click', () => {
-        let name = diagramName.value;
-        let scales = [];
-        for (let scale of diagramScales) {
-            scales.push(scale.value);
-        }
-        patterns.add(name, 10, scales);
-    });
+        savePattern.addEventListener('click', () => {
+            let name = inputName.value;
+            let scales = Array.from(inputScales).map(is => is.value);
+            console.log(scales);
+            patterns.add(name, 10, scales);
+        });
+    }
 }
