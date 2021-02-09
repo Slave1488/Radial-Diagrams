@@ -1,5 +1,5 @@
 "use strict";
-import Point from './point';
+import Point from '../datasource/point';
 
 export default class Render2D {
     constructor(canvas) {

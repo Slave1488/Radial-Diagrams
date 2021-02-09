@@ -1,4 +1,4 @@
-import patterns from './diagram-patterns';
+import patterns from '../datasource/diagram-patterns';
 
 export default () => {
     for (let form of document.querySelectorAll('form.diagramm-template__form')) {

@@ -1,7 +1,7 @@
-import Render2D from './api-render';
-import BasicNGon from './n-gon';
-import { RandNum } from './num';
-import patterns from './diagram-patterns';
+import Render2D from './render-api';
+import BasicNGon from '../datasource/n-gon';
+import { RandNum } from '../datasource/num';
+import patterns from '../datasource/diagram-patterns';
 
 export default () => {
     document.addEventListener('DOMContentLoaded', () => {

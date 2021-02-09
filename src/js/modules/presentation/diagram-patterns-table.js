@@ -1,4 +1,4 @@
-import patterns from './diagram-patterns';
+import patterns from '../datasource/diagram-patterns';
 import environment from './environment';
 
 export default () => {
