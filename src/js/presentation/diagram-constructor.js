@@ -1,4 +1,16 @@
-import patterns from '../datasource/diagram-patterns';
+import close from './close.js';
+import display from './diagram-display.js';
+
+export default (element) => {
+    for (const constructor of element.getElementsByClassName('diagram-constructor')) {
+        close(constructor);
+        display(constructor);
+    }
+}
+
+
+// OLD CODE
+/*import patterns from '../datasource/diagram-patterns';
 import environment from './environment';
 
 export default () => {
@@ -37,3 +49,4 @@ export default () => {
         }
     }
 }
+*/
