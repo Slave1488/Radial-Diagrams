@@ -3,14 +3,6 @@
     padding: 0;
 }
 
-.diagram {
-    background: red;
-}
-
-.diagram:hover {
-    cursor: pointer;
-}
-
 .diagram-display {
     background: green;
     position: relative;
@@ -39,7 +31,17 @@
     padding: 10px;
 }
 
-.diagram-list > .diagram + .diagram {
+.diagram-list > .diagram,
+.diagram-list > .create {
+    background: red;
+}
+
+.diagram-list > .diagram:hover,
+.diagram-list > .create:hover {
+    cursor: pointer;
+}
+
+.diagram-list > .diagram {
     margin-top: 10px;
 }
 
