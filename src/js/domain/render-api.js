@@ -1,9 +1,11 @@
 "use strict";
-import Point from '../datasource/point';
+import Point from '../datasource/point.js';
 
 export default class Render2D {
     constructor(canvas) {
         this._canvas = canvas;
+        this._canvas.width = this._canvas.offsetWidth;
+        this._canvas.height = this._canvas.offsetHeight;
         this._context = canvas.getContext('2d');
     }
 
