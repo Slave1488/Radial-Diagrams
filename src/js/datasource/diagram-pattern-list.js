@@ -1,13 +1,4 @@
-class DiagramPattern {
-    constructor(name, scaleRange, scaleNames) {
-        this.name = name;
-        this.size = {
-            axlesNumber: scaleNames.length,
-            range: scaleRange
-        };
-        this.scales = scaleNames;
-    }
-}
+import Pattern from './diagram-pattern.js';
 
 class DiagramPatterns {
     constructor() {
@@ -15,7 +6,7 @@ class DiagramPatterns {
     }
 
     add(name, scaleRange, scaleNames) {
-        this.patterns.push(new DiagramPattern(name, scaleRange, scaleNames));
+        this.patterns.push(new Pattern(name, scaleRange, scaleNames));
         localStorage.setItem("diagram patterns", JSON.stringify(this.patterns))
     }
 
