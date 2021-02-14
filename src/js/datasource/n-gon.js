@@ -1,5 +1,5 @@
 "use strict";
-import Point from './point';
+import Point from './point.js';
 
 class NGon {
     constructor(position, corners, n=null) {
@@ -43,8 +43,8 @@ export default class CenteredNormalizedNGon extends NGon {
         let res = [];
         for (let i = 0; i < n; ++i) {
             res.push(new Point(
-                Math.cos(Math.PI * 2 / n * i + Math.PI / 2),
-                Math.sin(Math.PI * 2 / n * i + Math.PI / 2)));
+                Math.cos(-Math.PI * 2 / n * i + Math.PI / 2),
+                Math.sin(-Math.PI * 2 / n * i + Math.PI / 2)));
         }
         return res;
     }
