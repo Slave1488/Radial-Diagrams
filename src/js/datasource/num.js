@@ -28,3 +28,23 @@ export class RandNum extends Num {
         return Math.floor(Math.random() * this.range) + this.min;
     }
 }
+
+export class ConceivedNum extends Num {
+    constructor(scheme) {
+        super();
+        if (scheme.length == 0) {
+            throw Error('Empty scheme for ConceivedNum');
+        }
+        this.scheme = scheme;
+        this.iterator = this.scheme[Symbol.iterator]();
+    }
+
+    [Symbol.toPrimitive](hint) {
+        let result = this.iterator.next();
+        if (result.done) {
+            this.iterator = this.scheme[Symbol.iterator]();
+            result = this.iterator.next();
+        }
+        return result.value;
+    }
+}
